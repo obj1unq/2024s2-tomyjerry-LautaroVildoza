@@ -1,0 +1,28 @@
+import tom.*
+
+describe "tom y jerry" {
+  test "tom come a jerry y nibble " {
+    assert.equals(10, tom.velocidadMaxima())
+    tom.comer(jerry)
+    assert.equals(15.2, tom.velocidadMaxima())
+    tom.correr(24)
+    assert.equals(14, tom.velocidadMaxima())
+    tom.comer(nibbles)
+    assert.equals(18.7, tom.velocidadMaxima())
+    jerry.cumpleAnhos()
+    tom.comer(jerry)
+    assert.equals(25.9, tom.velocidadMaxima())
+    tom.correr(38)
+    assert.equals(24, tom.velocidadMaxima())    
+  }
+}
+
+describe "Poder y Querer comer" {
+  test "tom jerry y nibble" {
+    assert.equals(false, tom.puedeComer(120))
+    assert.equals(true, tom.puedeComer(96))
+    assert.equals(false, tom.quiereComer(nibbles, 96))
+    assert.equals(true, tom.puedeComer(60))
+    assert.equals(true, tom.quiereComer(nibbles, 60))
+  }
+}
